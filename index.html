@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Website bí mật</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial;
+    background:url("nen.jpg") no-repeat center center fixed;
+    background-size:cover;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.box{
+    background:rgba(255,255,255,0.8);
+    padding:20px;
+    border-radius:15px;
+    text-align:center;
+}
+
+#hinh{
+    display:none;
+    margin-top:20px;
+    width:300px;
+}
+</style>
+
+</head>
+<body>
+
+<div class="box">
+    <h2>Nhập mật khẩu</h2>
+
+    <input type="password" id="mk" placeholder="Mật khẩu">
+    <button onclick="kiemTra()">OK</button>
+
+    <p id="tb"></p>
+
+    <img id="hinh" src="hinh.png">
+</div>
+
+<script>
+function kiemTra(){
+
+    let mk=document.getElementById("mk").value;
+
+    if(mk=="692011"){
+        document.getElementById("hinh").style.display="block";
+        document.getElementById("tb").innerHTML="✅ Đúng mật khẩu!";
+    }else{
+        document.getElementById("tb").innerHTML="❌ Sai mật khẩu!";
+        document.getElementById("hinh").style.display="none";
+    }
+
+}
+</script>
+
+</body>
+</html>
